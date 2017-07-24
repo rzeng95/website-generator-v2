@@ -1,17 +1,29 @@
 {
   "name": "website-generator-v2",
-  "version": "0.1.0",
+  "version": "0.0.1",
+  "homepage": "http://rzeng95.github.io",
   "private": true,
   "dependencies": {
-    "gh-pages": "^1.0.0",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
+    "prop-types": "15.5.10",
+    "react": "15.6.1",
+    "react-dom": "15.6.1",
+    "react-jss": "6.1.1",
+    "react-router-dom": "4.1.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "7.1.1",
+    "eslint": "3.19.0",
+    "eslint-config-airbnb": "15.0.0",
+    "eslint-plugin-import": "2.7.0",
+    "eslint-plugin-jsx-a11y": "5.0.1",
+    "eslint-plugin-react": "7.0.1",
+    "gh-pages": "1.0.0",
     "react-scripts": "1.0.10"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "deploy": "gh-pages -d build -r https://github.com/rzeng95/rzeng95.github.io.git -b master",
+    "deploy": "yarn run build && gh-pages -d build -r https://github.com/rzeng95/rzeng95.github.io.git -b master",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }
