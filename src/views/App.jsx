@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Route } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import injectSheet from 'react-jss';
@@ -16,17 +16,24 @@ const propTypes = {
 const styles = {
   main: {
     // background: '#F2F3F4',
+    padding: '30px 50px',
+    overflow: 'scroll',
+    overflowX: 'hidden',
+    height: 'calc(100vh - 230px)',
   },
 };
 
 const App = ({ classes }) => (
-  <div className={ classes.main }>
+  <div>
     <Header />
-    <Route exact path="/" component={ About } />
-    <Route exact path="/experience" component={ Experience } />
-    <Route exact path="/projects" component={ Projects } />
-    <Route exact path="/resume" component={ Resume } />
+    <div className={ classes.main }>
+      <Route exact path="/" component={ About } />
+      <Route exact path="/experience" component={ Experience } />
+      <Route exact path="/projects" component={ Projects } />
+      <Route exact path="/resume" component={ Resume } />
+    </div>
   </div>
+
 );
 
 App.propTypes = propTypes;

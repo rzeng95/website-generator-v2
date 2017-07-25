@@ -1,13 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Resume extends Component {
-  render() {
-    return (
-      <div>
-        resume
-      </div>
-    );
-  }
-}
+const Resume = () => (
+  <div>
+    hello
+  </div>
+);
 
 export default Resume;

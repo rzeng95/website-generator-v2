@@ -23,7 +23,9 @@ const styles = {
   nav: {
     display: 'flex',
     justifyContent: 'center',
-    background: '#abb8ce',
+    height: '50px',
+    // background: '#abb8ce',
+    background: 'linear-gradient(to bottom, #85898c, #F2F3F4)',
   },
   link: {
     margin: '10px 0px',
@@ -31,7 +33,7 @@ const styles = {
     textDecoration: 'none',
     fontSize: '20px',
     textAlign: 'center',
-    color: '#5c78a8',
+    color: '#3779e5',
   },
   activeLink: {
     color: '#45597a',
