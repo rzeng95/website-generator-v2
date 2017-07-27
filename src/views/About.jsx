@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import injectSheet from 'react-jss';
-import { NavLink } from 'react-router-dom';
 
 const propTypes = {
   classes: PropTypes.object.isRequired,
@@ -51,11 +50,11 @@ const About = ({ classes }) => (
       </p>
     </div>
     <div className={ classes.infoContainer }>
-      <NavLink exact to={ `${process.env.PUBLIC_URL}/resume.pdf` } target="_blank" className={ classes.links }>
+      {/* <a href={ `${process.env.PUBLIC_URL}/resume.pdf` } target="_blank" rel="noopener noreferrer" className={ classes.links }>
         <div className={ classes.resumeText}>
           Resume
         </div>
-      </NavLink>
+      </a> */}
       <div className={ classes.links }>
         <a href="https://github.com/rzeng95" target="_blank" rel="noopener noreferrer">
           <i className={ `fa fa-github-square fa-2x ${classes.fa}` } aria-hidden="true" />
