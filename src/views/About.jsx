@@ -47,7 +47,7 @@ const About = ({ classes }) => (
     <div className={ classes.subheaderContainer }>
       <p className={ classes.text }>
         Growing up in Minnesota, I studied Computer Science at UCLA.
-        I live in Los Angeles now, and currently work at Honey as a full-stack software engineer.
+        I live in Los Angeles now and currently work at Honey as a full-stack software engineer.
       </p>
     </div>
     <div className={ classes.infoContainer }>

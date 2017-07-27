@@ -37,8 +37,7 @@ const Home = ({ classes }) => {
         <TargetLink
           link="https://github.com/facebookincubator/create-react-app"
           displayName="create-react-app"
-        />. A production build was then minified
-        and uploaded to Github Pages.
+        />. A production build was then minified and uploaded to Github Pages.
       </p>
       <p className={ classes.listItem }>* React, React-Router</p>
       <p className={ classes.listItem }>* React-JSS</p>
