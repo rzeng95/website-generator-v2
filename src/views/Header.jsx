@@ -20,12 +20,38 @@ const styles = {
     fontWeight: '600',
     color: 'white',
   },
-  nav: {
+  navGroup: {
     display: 'flex',
     justifyContent: 'center',
-    height: '50px',
     // background: '#abb8ce',
-    background: 'linear-gradient(to bottom, #85898c, #F2F3F4)',
+    // background: 'linear-gradient(to bottom, #85898c, #F2F3F4)',
+  },
+  nav: {
+    height: '50px',
+    display: 'flex',
+    alignSelf: 'center',
+    // border: '1px dotted green',
+    position: 'relative',
+    overflow: 'hidden',
+    margin: '0px 3px',
+  },
+  underline: {
+    position: 'absolute',
+    top: '45px',
+    borderBottom: '2px solid #373737',
+    width: '100%',
+    transform: 'scaleX(0)',
+    transition: '0.2s',
+  },
+  underlineLeft: {
+    extend: 'underline',
+    transform: 'scaleX(1)',
+    right: '100%',
+  },
+  underlineRight: {
+    extend: 'underline',
+    transform: 'scaleX(1)',
+    left: '100%',
   },
   link: {
     margin: '10px 0px',
@@ -33,11 +59,20 @@ const styles = {
     textDecoration: 'none',
     fontSize: '20px',
     textAlign: 'center',
-    color: '#3779e5',
+    color: '#459cde',
   },
   activeLink: {
-    color: '#45597a',
+    color: '#373737',
     fontWeight: '800',
+    '& ~ $underline': {
+      transform: 'scaleX(1)',
+    },
+    '& ~ $underlineLeft': {
+      right: '0%',
+    },
+    '& ~ $underlineRight': {
+      left: '0%',
+    },
   },
 };
 
@@ -48,18 +83,27 @@ const Header = ({ classes }) => (
         Roland Zeng
       </h1>
     </div>
-    <div className={ classes.nav }>
-      <NavLink exact to="/" className={ classes.link } activeClassName={ classes.activeLink }>
-        About
-      </NavLink>
+    <div className={ classes.navGroup }>
+      <div className={ classes.nav }>
+        <NavLink exact to="/" className={ classes.link } activeClassName={ classes.activeLink }>
+          About
+        </NavLink>
+        <div className={ classes.underlineLeft } />
+      </div>
 
-      <NavLink exact to="/experience" className={ classes.link } activeClassName={ classes.activeLink }>
-        Experience
-      </NavLink>
+      <div className={ classes.nav }>
+        <NavLink exact to="/experience" className={ classes.link } activeClassName={ classes.activeLink }>
+          Experience
+        </NavLink>
+        <div className={ classes.underline } />
+      </div>
 
-      <NavLink exact to="/projects" className={ classes.link } activeClassName={ classes.activeLink }>
-        Projects
-      </NavLink>
+      <div className={ classes.nav }>
+        <NavLink exact to="/projects" className={ classes.link } activeClassName={ classes.activeLink }>
+          Projects
+        </NavLink>
+        <div className={ classes.underlineRight } />
+      </div>
     </div>
   </div>
 );
