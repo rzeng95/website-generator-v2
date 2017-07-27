@@ -18,7 +18,7 @@ const styles = {
     margin: '30px 0px',
   },
   headerText: {
-    fontSize: '22px',
+    fontSize: '24px',
   },
   text: {
     lineHeight: '25px',
