@@ -46,12 +46,12 @@ const About = ({ classes }) => (
     </div>
     <div className={ classes.subheaderContainer }>
       <p className={ classes.text }>
-        Growing up in Minnesota, I moved to California to study Computer Science at UCLA.
+        Growing up in Minnesota, I studied Computer Science at UCLA.
         I live in Los Angeles now, and currently work at Honey as a full-stack software engineer.
       </p>
     </div>
     <div className={ classes.infoContainer }>
-      <NavLink exact to="/experience" className={ classes.links }>
+      <NavLink exact to={ `${process.env.PUBLIC_URL}/resume.pdf` } target="_blank" className={ classes.links }>
         <div className={ classes.resumeText}>
           Resume
         </div>

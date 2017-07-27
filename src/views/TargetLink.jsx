@@ -11,7 +11,7 @@ const propTypes = {
 const styles = {
   link: {
     textDecoration: 'none',
-    color: '#3779e5',
+    color: '#459cde',
     fontSize: '18px',
   },
 };
